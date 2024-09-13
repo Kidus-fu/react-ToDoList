@@ -83,15 +83,14 @@ function Task(){
      ))
         
     }
-    function countaddLod(){
-        setaddLod(a => a + 1)
-    }
-    alert(addLod)
-    setTimeout(countaddLod(),"9000")
+function countadd(){
+	setaddLod(a => a + 1)
+}
+    
     const AddTask = (e) => {
         setlistpk(l => l + 1)
+
         let taskvalue = e.target.dataset.task
-        
         list.push({"task":taskvalue})
         setlistItem(list.map((lists ,index) => { 
            let r = list.filter(task => task === lists)
@@ -107,8 +106,7 @@ function Task(){
                     data-bs-toggle="popover"
                     title={index}
                     data-bs-content="Popup content"
-                >
-                    
+                >   
                 </button>
                 
             </p>
@@ -197,8 +195,6 @@ function Task(){
                     </button>
                     
                 </div>
-                
-                   
                 </div>
             </div>
             
